@@ -11,7 +11,6 @@ import Alamofire
 class NetworkService {
 
     static let shared = NetworkService()
-    
 
     func getJoke (for urlStr: String, completionHandler: @escaping (RandomJoke?, String?) -> Void) {
         
