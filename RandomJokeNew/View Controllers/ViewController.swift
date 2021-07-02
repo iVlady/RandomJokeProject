@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         jokeAnswerLabel.layer.cornerRadius = 15
 // Скругление лейблов почему-то не работает, пробовал в разных методах вью это сделать, не заработало почему-то
         
-        startButton.layer.cornerRadius = 14
+        startButton.layer.cornerRadius = 15
         activityController.isHidden = true
         oooopppssLabel.isHidden = true
     }
