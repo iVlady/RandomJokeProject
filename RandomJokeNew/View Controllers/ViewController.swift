@@ -32,23 +32,19 @@ class ViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
         
-        activityController.isHidden = false
         activityController.startAnimating()
-        
+        activityController.hidesWhenStopped = true
         
         network.getJoke(for: urlString) { randomJoke, error in
             if let error = error {
                 print("nullllllllllll \(error)")
                 self.oooopppssLabel.isHidden = false
-                
             }
             if let randomJoke = randomJoke {
                 self.jokeSenderLabel.text = randomJoke.setup
                 self.jokeAnswerLabel.text = randomJoke.delivery
                 self.activityController.stopAnimating()
-                self.activityController.isHidden = true
                 self.oooopppssLabel.isHidden = true
-
             }
         }
     }
