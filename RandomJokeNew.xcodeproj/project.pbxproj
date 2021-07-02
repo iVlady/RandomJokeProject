@@ -75,10 +75,10 @@
 		B61B440E268F38E0003A8554 /* RandomJokeNew */ = {
 			isa = PBXGroup;
 			children = (
-				B61B4429268F3B20003A8554 /* Services */,
 				B61B4426268F3AFE003A8554 /* Models */,
-				B61B4425268F3AE9003A8554 /* Storyboards */,
+				B61B4429268F3B20003A8554 /* Services */,
 				B61B4424268F3ADA003A8554 /* View Controllers */,
+				B61B4425268F3AE9003A8554 /* Storyboards */,
 				B61B4423268F3ACA003A8554 /* Supporting Files */,
 				B61B4418268F38E1003A8554 /* Assets.xcassets */,
 			);
