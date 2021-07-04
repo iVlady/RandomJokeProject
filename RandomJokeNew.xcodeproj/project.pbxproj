@@ -16,6 +16,10 @@
 		B61B441C268F38E1003A8554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61B441A268F38E1003A8554 /* LaunchScreen.storyboard */; };
 		B61B4428268F3B19003A8554 /* RandomJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B4427268F3B19003A8554 /* RandomJoke.swift */; };
 		B61B442B268F3B32003A8554 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61B442A268F3B32003A8554 /* NetworkService.swift */; };
+		B67B286226920A700000DCE4 /* OwnListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B286126920A700000DCE4 /* OwnListTableViewController.swift */; };
+		B67B286426920AD40000DCE4 /* OwnJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B286326920AD40000DCE4 /* OwnJoke.swift */; };
+		B67B28662692134C0000DCE4 /* AddNewJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B28652692134C0000DCE4 /* AddNewJokeViewController.swift */; };
+		B67B28682692139A0000DCE4 /* DisplayJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B28672692139A0000DCE4 /* DisplayJokeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		B61B441D268F38E1003A8554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61B4427268F3B19003A8554 /* RandomJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJoke.swift; sourceTree = "<group>"; };
 		B61B442A268F3B32003A8554 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B67B286126920A700000DCE4 /* OwnListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnListTableViewController.swift; sourceTree = "<group>"; };
+		B67B286326920AD40000DCE4 /* OwnJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnJoke.swift; sourceTree = "<group>"; };
+		B67B28652692134C0000DCE4 /* AddNewJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewJokeViewController.swift; sourceTree = "<group>"; };
+		B67B28672692139A0000DCE4 /* DisplayJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayJokeViewController.swift; sourceTree = "<group>"; };
 		CF0639D78B79B9760A14C5C5 /* Pods-RandomJokeNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomJokeNew.debug.xcconfig"; path = "Target Support Files/Pods-RandomJokeNew/Pods-RandomJokeNew.debug.xcconfig"; sourceTree = "<group>"; };
 		F299AD2F9017AD5C9A5CDB0B /* Pods-RandomJokeNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomJokeNew.release.xcconfig"; path = "Target Support Files/Pods-RandomJokeNew/Pods-RandomJokeNew.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				B61B4413268F38E0003A8554 /* ViewController.swift */,
+				B67B286126920A700000DCE4 /* OwnListTableViewController.swift */,
+				B67B28652692134C0000DCE4 /* AddNewJokeViewController.swift */,
+				B67B28672692139A0000DCE4 /* DisplayJokeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				B61B4427268F3B19003A8554 /* RandomJoke.swift */,
+				B67B286326920AD40000DCE4 /* OwnJoke.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,10 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67B28682692139A0000DCE4 /* DisplayJokeViewController.swift in Sources */,
 				B61B442B268F3B32003A8554 /* NetworkService.swift in Sources */,
 				B61B4414268F38E0003A8554 /* ViewController.swift in Sources */,
 				B61B4428268F3B19003A8554 /* RandomJoke.swift in Sources */,
+				B67B286426920AD40000DCE4 /* OwnJoke.swift in Sources */,
+				B67B28662692134C0000DCE4 /* AddNewJokeViewController.swift in Sources */,
 				B61B4410268F38E0003A8554 /* AppDelegate.swift in Sources */,
+				B67B286226920A700000DCE4 /* OwnListTableViewController.swift in Sources */,
 				B61B4412268F38E0003A8554 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

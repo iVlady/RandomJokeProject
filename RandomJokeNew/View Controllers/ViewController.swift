@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         
         network.getJoke(for: urlString) { randomJoke, error in
             if let error = error {
-                print("nullllllllllll \(error)")
+                print("PROBLEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \(error)")
                 self.oooopppssLabel.isHidden = false
             }
             if let randomJoke = randomJoke {
