@@ -17,39 +17,33 @@ class AddNewJokeViewController: UIViewController {
     var delegate: AddJokeDelegate!
     let ownJokeKey = "joke Key"
     
-     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-   
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
     
-    
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         
-        
     }
-    
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        guard let title = titleTextField.text else { return }
-        guard let jokeFirst = jokeFirstTextField.text else { return }
-        guard let jokeSecond = jokeSecondTextField.text else { return }
+//        guard let title = titleTextField.text else { return }
+//        guard let jokeFirst = jokeFirstTextField.text else { return }
+//        guard let jokeSecond = jokeSecondTextField.text else { return }
+//
+//        let ownJoke = OwnJoke(ownJokeName: title, ownJokeSetup: jokeFirst, ownJokeDelivery: jokeSecond)
+//
+//        delegate.saveJoke(joke: ownJoke)
+//
+//        UserDefaults.standard.set(ownJoke, forKey: ownJokeKey)
+//        dismiss(animated: true)
         
-        let ownJoke = OwnJoke(ownJokeName: title, ownJokeSetup: jokeFirst, ownJokeDelivery: jokeSecond)
-        
-        delegate.saveJoke(joke: ownJoke)
-        
-        UserDefaults.standard.set(ownJoke, forKey: ownJokeKey)
-        dismiss(animated: true)
+        saveAndExit()
         
     }
-    
-    
     
 //    func buttonStyle () {
 //        guard let title = titleTextField.text,
@@ -61,4 +55,21 @@ class AddNewJokeViewController: UIViewController {
 //        }
 //    }
     
+}
+
+extension AddNewJokeViewController {
+    
+    private func saveAndExit() {
+        guard let title = titleTextField.text else { return }
+        guard let jokeFirst = jokeFirstTextField.text else { return }
+        guard let jokeSecond = jokeSecondTextField.text else { return }
+        
+        let joke = OwnJoke(ownJokeSetup: jokeFirst,
+                           ownJokeDelivery: jokeSecond,
+                           ownJokeName: title)
+        
+        delegate.saveJoke(joke)
+        dismiss(animated: true)
+        
+    }
 }

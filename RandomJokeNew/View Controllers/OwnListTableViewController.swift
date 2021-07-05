@@ -8,11 +8,11 @@
 import UIKit
 
 protocol AddJokeDelegate {
-    func saveJoke (joke: OwnJoke)
+    func saveJoke (_ joke: OwnJoke)
 }
 
 class OwnListTableViewController: UITableViewController, AddJokeDelegate {
-    func saveJoke(joke: OwnJoke) {
+    func saveJoke(_ joke: OwnJoke) {
         ownJoke.append(joke)
         tableView.reloadData()
     }
