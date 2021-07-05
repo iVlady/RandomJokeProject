@@ -13,18 +13,22 @@ protocol AddJokeDelegate {
 
 class OwnListTableViewController: UITableViewController, AddJokeDelegate {
     func saveJoke(_ joke: OwnJoke) {
-        ownJoke.append(joke)
+        ownJokes.append(joke)
         tableView.reloadData()
     }
     
 
     @IBOutlet weak var editButton: UIBarButtonItem!
     let cellID = "Cell"
-    private var ownJoke: [OwnJoke] = []
+    let ownJokeKey = "joke Key"
+    private var ownJokes: [OwnJoke] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let newJoke = UserDefaults.standard.string(forKey: ownJokeKey) {
+            ownJokes.append(newJoke)
+        }
         tableView.reloadData()
 
     }

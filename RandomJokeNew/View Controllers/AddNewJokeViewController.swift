@@ -25,36 +25,9 @@ class AddNewJokeViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    @IBAction func editButton(_ sender: UIBarButtonItem) {
-        
-    }
-    
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-//        guard let title = titleTextField.text else { return }
-//        guard let jokeFirst = jokeFirstTextField.text else { return }
-//        guard let jokeSecond = jokeSecondTextField.text else { return }
-//
-//        let ownJoke = OwnJoke(ownJokeName: title, ownJokeSetup: jokeFirst, ownJokeDelivery: jokeSecond)
-//
-//        delegate.saveJoke(joke: ownJoke)
-//
-//        UserDefaults.standard.set(ownJoke, forKey: ownJokeKey)
-//        dismiss(animated: true)
-        
         saveAndExit()
-        
     }
-    
-//    func buttonStyle () {
-//        guard let title = titleTextField.text,
-//              let jokeFirst = jokeFirstTextField.text,
-//              let jokeSecond = jokeSecondTextField.text
-//        else { return }
-//        if title.isEmpty && jokeFirst.isEmpty && jokeSecond.isEmpty {
-//            saveButton.isEnabled = false
-//        }
-//    }
-    
 }
 
 extension AddNewJokeViewController {
@@ -68,8 +41,19 @@ extension AddNewJokeViewController {
                            ownJokeDelivery: jokeSecond,
                            ownJokeName: title)
         
+        UserDefaults.standard.set(joke, forKey: ownJokeKey)
         delegate.saveJoke(joke)
         dismiss(animated: true)
         
     }
+    
+    //    func buttonStyle () {
+    //        guard let title = titleTextField.text,
+    //              let jokeFirst = jokeFirstTextField.text,
+    //              let jokeSecond = jokeSecondTextField.text
+    //        else { return }
+    //        if title.isEmpty && jokeFirst.isEmpty && jokeSecond.isEmpty {
+    //            saveButton.isEnabled = false
+    //        }
+    //    }
 }

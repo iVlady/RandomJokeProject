@@ -21,7 +21,6 @@ class NetworkService {
             case .failure(let error):
                 completionHandler(nil, error.localizedDescription)
             case .success(let result):
-//                guard response ==  else { return }
                 completionHandler(result, nil)
             }
         }
