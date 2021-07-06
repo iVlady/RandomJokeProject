@@ -66,16 +66,16 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        ownJoke.count
+        ownJokes.count
     }
 
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        ownJoke.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+        ownJokes.swapAt(sourceIndexPath.row, destinationIndexPath.row)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        let joke = ownJoke[indexPath.row]
+        let joke = ownJokes[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = joke.ownJokeName
         cell.contentConfiguration = content
@@ -85,7 +85,7 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            ownJoke.remove(at: indexPath.row)
+            ownJokes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
