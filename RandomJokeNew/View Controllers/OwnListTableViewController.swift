@@ -27,7 +27,7 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
         super.viewDidLoad()
 
         if let newJoke = UserDefaults.standard.string(forKey: ownJokeKey) {
-            ownJokes.append(newJoke)
+            
         }
         tableView.reloadData()
 

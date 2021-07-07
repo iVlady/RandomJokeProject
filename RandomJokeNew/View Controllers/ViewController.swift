@@ -35,17 +35,19 @@ class ViewController: UIViewController {
         activityController.startAnimating()
         activityController.hidesWhenStopped = true
         
-        network.getJoke(for: urlString) { randomJoke, error in
+        network.fetchJoke(for: urlString) { randomJoke, error in
             if let error = error {
                 print("PROBLEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \(error)")
                 self.oooopppssLabel.isHidden = false
             }
             if let randomJoke = randomJoke {
+
                 self.jokeSenderLabel.text = randomJoke.setup
                 self.jokeAnswerLabel.text = randomJoke.delivery
                 self.activityController.stopAnimating()
                 self.oooopppssLabel.isHidden = true
             }
+
         }
     }
 }
