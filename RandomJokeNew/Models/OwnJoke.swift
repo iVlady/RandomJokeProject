@@ -6,15 +6,10 @@
 //
 import Foundation
 
-
-//struct OwnJoke: Codable {
-//    var ownJokeName: String
-//    var ownJokeSetup: String
-//    var ownJokeDelivery: String
-//}
-
 struct OwnJoke: Codable {
+    let ownJokeName: String
     let ownJokeSetup: String
     let ownJokeDelivery: String
-    var ownJokeName: String
 }
+
+ 

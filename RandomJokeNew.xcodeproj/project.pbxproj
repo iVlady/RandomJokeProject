@@ -20,6 +20,7 @@
 		B67B286426920AD40000DCE4 /* OwnJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B286326920AD40000DCE4 /* OwnJoke.swift */; };
 		B67B28662692134C0000DCE4 /* AddNewJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B28652692134C0000DCE4 /* AddNewJokeViewController.swift */; };
 		B67B28682692139A0000DCE4 /* DisplayJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B28672692139A0000DCE4 /* DisplayJokeViewController.swift */; };
+		B6FB1BFA269759A9009D92EB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FB1BF9269759A9009D92EB /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B67B286326920AD40000DCE4 /* OwnJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnJoke.swift; sourceTree = "<group>"; };
 		B67B28652692134C0000DCE4 /* AddNewJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewJokeViewController.swift; sourceTree = "<group>"; };
 		B67B28672692139A0000DCE4 /* DisplayJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayJokeViewController.swift; sourceTree = "<group>"; };
+		B6FB1BF9269759A9009D92EB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		CF0639D78B79B9760A14C5C5 /* Pods-RandomJokeNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomJokeNew.debug.xcconfig"; path = "Target Support Files/Pods-RandomJokeNew/Pods-RandomJokeNew.debug.xcconfig"; sourceTree = "<group>"; };
 		F299AD2F9017AD5C9A5CDB0B /* Pods-RandomJokeNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomJokeNew.release.xcconfig"; path = "Target Support Files/Pods-RandomJokeNew/Pods-RandomJokeNew.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B61B442A268F3B32003A8554 /* NetworkService.swift */,
+				B6FB1BF9269759A9009D92EB /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				B67B286426920AD40000DCE4 /* OwnJoke.swift in Sources */,
 				B67B28662692134C0000DCE4 /* AddNewJokeViewController.swift in Sources */,
 				B61B4410268F38E0003A8554 /* AppDelegate.swift in Sources */,
+				B6FB1BFA269759A9009D92EB /* StorageManager.swift in Sources */,
 				B67B286226920A700000DCE4 /* OwnListTableViewController.swift in Sources */,
 				B61B4412268F38E0003A8554 /* SceneDelegate.swift in Sources */,
 			);
