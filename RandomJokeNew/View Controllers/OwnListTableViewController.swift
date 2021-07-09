@@ -15,11 +15,6 @@ protocol AddJokeDelegate {
 
 class OwnListTableViewController: UITableViewController, AddJokeDelegate {
     
-    func saveJoke(_ joke: OwnJoke) {
-        ownJokes.append(joke)
-        tableView.reloadData()
-    }
-    
     @IBOutlet weak var editButton: UIBarButtonItem!
     let cellID = "Cell"
     private let ownJokeKey = "joke Key"
@@ -28,7 +23,14 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ownJokes = StorageManager.shared.fetchJokes()
+        tableView.reloadData()
         
+    }
+    
+    func saveJoke(_ joke: OwnJoke) {
+        ownJokes.append(joke)
+        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,33 +38,16 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
         addNewJokeVC.delegate = self
     }
     
-
-//    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-//
-//        if tableView.isEditing {
-//            tableView.isEditing = false
-//            editButton.title = "Edit"
-//        } else {
-//            tableView.isEditing = true
-//            editButton.title = "Done"
-//
-//        }
-//    }
-    
-
-
-    
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ownJokes.count
@@ -70,13 +55,10 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
 
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         ownJokes.swapAt(sourceIndexPath.row, destinationIndexPath.row)
-//        ownJokeArray.swapAt(sourceIndexPath.row, destinationIndexPath.row)
-
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-//        let joke = ownJokes[indexPath.row]
         let joke = ownJokes[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = joke.ownJokeName
