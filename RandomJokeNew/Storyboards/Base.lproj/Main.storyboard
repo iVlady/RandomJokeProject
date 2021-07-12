@@ -118,11 +118,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Joke List" id="Sfp-Gy-qnU">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="84L-Ab-RyR">
-                            <connections>
-                                <action selector="editButtonPressed:" destination="17Z-9n-BMN" id="Gdc-b1-Hvk"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="wrR-OJ-oJf">
                             <connections>
                                 <segue destination="v9r-eP-YbY" kind="presentation" id="2wL-3M-vG6"/>
