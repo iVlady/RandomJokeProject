@@ -27,13 +27,6 @@
                                     <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jG9-dd-uFU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ooooppssss... click the button again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmE-Pu-iyl" userLabel="oooopppssLabel">
-                                <rect key="frame" x="50" y="529" width="313" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.090196087960000004" green="0.60392159219999997" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvl-xd-cEE">
                                 <rect key="frame" x="106" y="178" width="288" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,7 +72,6 @@
                         <outlet property="girlIconImage" destination="l1N-Ba-K7s" id="PDh-I8-nxO"/>
                         <outlet property="jokeAnswerLabel" destination="Hrf-tF-EJw" id="uvL-nW-iL2"/>
                         <outlet property="jokeSenderLabel" destination="Fvl-xd-cEE" id="fD9-Xb-SJx"/>
-                        <outlet property="oooopppssLabel" destination="RmE-Pu-iyl" id="4Jt-IT-Asn"/>
                         <outlet property="startButton" destination="YeN-7d-fXi" id="gTB-6w-AaV"/>
                     </connections>
                 </viewController>

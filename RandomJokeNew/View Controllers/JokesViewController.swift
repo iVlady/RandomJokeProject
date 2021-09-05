@@ -15,7 +15,6 @@ class JokesViewController: UIViewController {
     @IBOutlet weak var jokeSenderLabel: UILabel!
     @IBOutlet weak var jokeAnswerLabel: UILabel!
     @IBOutlet weak var activityController: UIActivityIndicatorView!
-    @IBOutlet weak var oooopppssLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
     var network = NetworkService.shared
@@ -35,7 +34,6 @@ class JokesViewController: UIViewController {
         
         startButton.layer.cornerRadius = 15
         activityController.isHidden = true
-        oooopppssLabel.isHidden = true
     }
 
 
@@ -47,7 +45,7 @@ class JokesViewController: UIViewController {
         network.fetchJoke(for: urlString) { randomJoke, error in
             if let error = error {
                 print("PROBLEM! \(error)")
-                self.oooopppssLabel.isHidden = false
+                self.errorAlert()
             }
             if let randomJoke = randomJoke {
                 
@@ -59,10 +57,41 @@ class JokesViewController: UIViewController {
                 self.jokeSenderLabel.text = randomJoke.setup
                 self.jokeAnswerLabel.text = randomJoke.delivery
                 self.activityController.stopAnimating()
-                self.oooopppssLabel.isHidden = true
             }
 
         }
+    }
+}
+
+extension JokesViewController {
+    
+    func errorAlert() {
+        let ac = UIAlertController(title: "Ooooooopppsssss",
+                                   message: "It seems that something went wrong. Please reload",
+                                   preferredStyle: .alert)
+        let reloadButton = UIAlertAction(title: "RELOAD",
+                                         style: .cancel)
+        { _ in
+            self.network.fetchJoke(for: self.urlString) { randomJoke, error in
+            if let error = error {
+                print("PROBLEM! \(error)")
+                self.errorAlert()
+            }
+            if let randomJoke = randomJoke {
+                
+                self.jokeSenderLabel.isHidden = false
+                self.jokeAnswerLabel.isHidden = false
+                self.girlIconImage.isHidden = false
+                self.boyIconImage.isHidden = false
+                
+                self.jokeSenderLabel.text = randomJoke.setup
+                self.jokeAnswerLabel.text = randomJoke.delivery
+                self.activityController.stopAnimating()
+                }
+            }
+        }
+        ac.addAction(reloadButton)
+        self.present(ac, animated: true, completion: nil)
     }
 }
 
