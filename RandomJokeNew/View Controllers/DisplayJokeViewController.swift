@@ -15,7 +15,6 @@ class DisplayJokeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
     }
 
 }
