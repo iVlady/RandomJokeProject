@@ -25,7 +25,6 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
 
         ownJokes = StorageManager.shared.fetchJokes()
         tableView.reloadData()
-        
     }
     
     func saveJoke(_ joke: OwnJoke) {
@@ -45,7 +44,11 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        guard let displayJokeVC = storyboard?.instantiateViewController(identifier: "displayJoke") as? DisplayJokeViewController else { return }
+        let joke = ownJokes[indexPath.row]
+        displayJokeVC.jokeAnswerLabel?.text = joke.ownJokeSetup
+        displayJokeVC.jokeQuestionLabel?.text = joke.ownJokeDelivery
+        navigationController?.pushViewController(displayJokeVC, animated: false)
     }
 
     

@@ -24,6 +24,7 @@ class AddNewJokeViewController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         saveAndExit()
     }
+    
 }
 
 extension AddNewJokeViewController {
