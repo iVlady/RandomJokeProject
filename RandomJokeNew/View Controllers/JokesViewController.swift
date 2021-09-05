@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class JokesViewController: UIViewController {
+    
+    @IBOutlet weak var girlIconImage: UILabel!
+    @IBOutlet weak var boyIconImage: UILabel!
+    
     @IBOutlet weak var jokeSenderLabel: UILabel!
     @IBOutlet weak var jokeAnswerLabel: UILabel!
     @IBOutlet weak var activityController: UIActivityIndicatorView!
@@ -19,6 +23,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        jokeSenderLabel.isHidden = true
+        jokeAnswerLabel.isHidden = true
+        girlIconImage.isHidden = true
+        boyIconImage.isHidden = true
         
         jokeSenderLabel.layer.cornerRadius = 15
         jokeAnswerLabel.layer.cornerRadius = 15
@@ -37,11 +46,16 @@ class ViewController: UIViewController {
         
         network.fetchJoke(for: urlString) { randomJoke, error in
             if let error = error {
-                print("PROBLEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \(error)")
+                print("PROBLEM! \(error)")
                 self.oooopppssLabel.isHidden = false
             }
             if let randomJoke = randomJoke {
-
+                
+                self.jokeSenderLabel.isHidden = false
+                self.jokeAnswerLabel.isHidden = false
+                self.girlIconImage.isHidden = false
+                self.boyIconImage.isHidden = false
+                
                 self.jokeSenderLabel.text = randomJoke.setup
                 self.jokeAnswerLabel.text = randomJoke.delivery
                 self.activityController.stopAnimating()

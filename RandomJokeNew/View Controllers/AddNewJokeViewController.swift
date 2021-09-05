@@ -37,10 +37,6 @@ extension AddNewJokeViewController {
                            ownJokeSetup: jokeFirst,
                            ownJokeDelivery: jokeSecond)
         
-        
-
-//        UserDefaults.standard.set(joke, forKey: ownJokeKey)
-//                delegate.saveJoke(joke)
         StorageManager.shared.save(joke)
         delegate.saveJoke(joke)
         dismiss(animated: true)

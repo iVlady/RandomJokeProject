@@ -11,7 +11,7 @@
         <!--Joker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomJokeNew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JokesViewController" customModule="RandomJokeNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,8 @@
                     <tabBarItem key="tabBarItem" title="Joker" image="smiley" catalog="system" id="73J-Nn-Ejf"/>
                     <connections>
                         <outlet property="activityController" destination="nRf-3G-nen" id="Jp5-Cm-0Na"/>
+                        <outlet property="boyIconImage" destination="Mdx-OE-k77" id="Iag-tM-zDC"/>
+                        <outlet property="girlIconImage" destination="l1N-Ba-K7s" id="PDh-I8-nxO"/>
                         <outlet property="jokeAnswerLabel" destination="Hrf-tF-EJw" id="uvL-nW-iL2"/>
                         <outlet property="jokeSenderLabel" destination="Fvl-xd-cEE" id="fD9-Xb-SJx"/>
                         <outlet property="oooopppssLabel" destination="RmE-Pu-iyl" id="4Jt-IT-Asn"/>
