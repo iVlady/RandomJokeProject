@@ -30,22 +30,28 @@ class AddNewJokeViewController: UIViewController {
 extension AddNewJokeViewController {
     
     private func saveAndExit() {
-        guard let title = titleTextField.text else {
-            print("1")
-            return }
-        guard let jokeFirst = jokeFirstTextField.text else {
-            print("2")
-            return }
-        guard let jokeSecond = jokeSecondTextField.text else {
-            print("3")
-            return }
+        guard let title = titleTextField.text else { return }
+        guard let jokeFirst = jokeFirstTextField.text else { return }
+        guard let jokeSecond = jokeSecondTextField.text else { return }
         
-        let joke = OwnJoke(ownJokeName: title,
-                           ownJokeSetup: jokeFirst,
-                           ownJokeDelivery: jokeSecond)
-        
-        StorageManager.shared.save(joke)
-        delegate.saveJoke(joke)
-        dismiss(animated: true)
+        if !title.isEmpty && !jokeFirst.isEmpty && !jokeSecond.isEmpty {
+            let joke = OwnJoke(ownJokeName: title,
+                               ownJokeSetup: jokeFirst,
+                               ownJokeDelivery: jokeSecond)
+
+            StorageManager.shared.save(joke)
+            delegate.saveJoke(joke)
+            dismiss(animated: true)
+        } else {
+            textFieldAlert()
+        }
+    }
+    
+    func textFieldAlert() {
+        let ac = UIAlertController(title: "You missed something", message: "Please fill all fields", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        ac.addAction(okButton)
+        self.present(ac, animated: true, completion: nil)
     }
 }
+
