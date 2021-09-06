@@ -110,8 +110,8 @@
 			children = (
 				B61B4413268F38E0003A8554 /* JokesViewController.swift */,
 				B67B286126920A700000DCE4 /* OwnListTableViewController.swift */,
-				B67B28652692134C0000DCE4 /* AddNewJokeViewController.swift */,
 				B67B28672692139A0000DCE4 /* DisplayJokeViewController.swift */,
+				B67B28652692134C0000DCE4 /* AddNewJokeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

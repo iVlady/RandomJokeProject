@@ -46,8 +46,8 @@ class OwnListTableViewController: UITableViewController, AddJokeDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let displayJokeVC = storyboard?.instantiateViewController(identifier: "displayJoke") as? DisplayJokeViewController else { return }
         let joke = ownJokes[indexPath.row]
-        displayJokeVC.jokeAnswerLabel?.text = joke.ownJokeSetup
-        displayJokeVC.jokeQuestionLabel?.text = joke.ownJokeDelivery
+        displayJokeVC.jokeQue = joke.ownJokeSetup
+        displayJokeVC.jokeAns = joke.ownJokeDelivery
         navigationController?.pushViewController(displayJokeVC, animated: false)
     }
 
