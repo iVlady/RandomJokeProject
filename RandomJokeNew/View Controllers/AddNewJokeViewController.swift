@@ -17,7 +17,7 @@ class AddNewJokeViewController: UIViewController {
     var delegate: AddJokeDelegate!
     let ownJokeKey = "joke Key"
     
-    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true)
     }
     

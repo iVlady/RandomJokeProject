@@ -179,9 +179,9 @@
         <!--AddNewJoke-->
         <scene sceneID="xvP-Jz-xsW">
             <objects>
-                <viewController title="AddNewJoke" id="v9r-eP-YbY" customClass="AddNewJokeViewController" customModule="RandomJokeNew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AddNewJoke" modalPresentationStyle="fullScreen" id="v9r-eP-YbY" customClass="AddNewJokeViewController" customModule="RandomJokeNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y7P-WT-25Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TITLE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kj4-OA-OPb">
@@ -213,17 +213,21 @@
                                     <action selector="saveButtonPressed:" destination="v9r-eP-YbY" eventType="touchUpInside" id="UOS-cm-lCt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-4b-faj">
+                                <rect key="frame" x="178" y="650" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" red="0.88235294819999999" green="0.38823530080000002" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="v9r-eP-YbY" eventType="touchUpInside" id="JDR-CY-50R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KJv-HK-YFT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Cancel" id="HLU-ev-7vf">
-                            <connections>
-                                <action selector="cancelButtonPressed:" destination="v9r-eP-YbY" id="f1t-2D-WKk"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="jokeFirstTextField" destination="mqK-Eh-la2" id="8nN-NV-jmm"/>
