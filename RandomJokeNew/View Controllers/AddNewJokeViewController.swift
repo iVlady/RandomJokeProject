@@ -30,9 +30,15 @@ class AddNewJokeViewController: UIViewController {
 extension AddNewJokeViewController {
     
     private func saveAndExit() {
-        guard let title = titleTextField.text else { return }
-        guard let jokeFirst = jokeFirstTextField.text else { return }
-        guard let jokeSecond = jokeSecondTextField.text else { return }
+        guard let title = titleTextField.text else {
+            print("1")
+            return }
+        guard let jokeFirst = jokeFirstTextField.text else {
+            print("2")
+            return }
+        guard let jokeSecond = jokeSecondTextField.text else {
+            print("3")
+            return }
         
         let joke = OwnJoke(ownJokeName: title,
                            ownJokeSetup: jokeFirst,
