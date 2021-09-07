@@ -29,7 +29,9 @@ class JokesViewController: UIViewController {
         boyIconImage.isHidden = true
         
         jokeSenderLabel.layer.cornerRadius = 15
+        jokeSenderLabel.clipsToBounds = true
         jokeAnswerLabel.layer.cornerRadius = 15
+        jokeAnswerLabel.clipsToBounds = true
 // Скругление лейблов почему-то не работает, пробовал в разных методах вью это сделать, не заработало почему-то
         
         startButton.layer.cornerRadius = 15

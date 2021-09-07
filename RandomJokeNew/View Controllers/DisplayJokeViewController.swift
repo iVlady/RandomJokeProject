@@ -18,6 +18,11 @@ class DisplayJokeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        jokeQuestionLabel.layer.cornerRadius = 15
+        jokeQuestionLabel.clipsToBounds = true
+        jokeAnswerLabel.layer.cornerRadius = 15
+        jokeAnswerLabel.clipsToBounds = true
+        
         jokeQuestionLabel.text = jokeQue
         jokeAnswerLabel.text = jokeAns
         
