@@ -67,8 +67,7 @@ extension JokesViewController {
     
     func errorAlert() {
         
-        let blurEffect = UIBlurEffect(style: .systemChromeMaterialDark)
-        let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        let blurVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
         blurVisualEffectView.frame = view.bounds
         
         let ac = UIAlertController(title: "Ooooooopppsssss",

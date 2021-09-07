@@ -48,9 +48,10 @@ extension AddNewJokeViewController {
     }
     
     func textFieldAlert() {
+                
+        let blurVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
+
         
-        let blurEffect = UIBlurEffect(style: .systemChromeMaterialDark)
-        let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
         blurVisualEffectView.frame = view.bounds
         
         let ac = UIAlertController(title: "You missed something", message: "Please fill all fields", preferredStyle: .alert)
