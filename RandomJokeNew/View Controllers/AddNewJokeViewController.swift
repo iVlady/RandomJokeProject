@@ -54,8 +54,12 @@ extension AddNewJokeViewController {
         
         blurVisualEffectView.frame = view.bounds
         
-        let ac = UIAlertController(title: "You missed something", message: "Please fill all fields", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default) { _ in
+        let ac = UIAlertController(title: "You missed something",
+                                   message: "Please fill all fields",
+                                   preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK",
+                                     style: .default)
+        { _ in
             blurVisualEffectView.removeFromSuperview()
         }
         

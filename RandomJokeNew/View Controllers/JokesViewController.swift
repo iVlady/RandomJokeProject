@@ -81,6 +81,7 @@ extension JokesViewController {
                 print("PROBLEM! \(error)")
                 self.errorAlert()
             }
+                
             if let randomJoke = randomJoke {
                 
                 self.jokeSenderLabel.isHidden = false
