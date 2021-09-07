@@ -66,6 +66,11 @@ class JokesViewController: UIViewController {
 extension JokesViewController {
     
     func errorAlert() {
+        
+        let blurEffect = UIBlurEffect(style: .systemChromeMaterialDark)
+        let blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        blurVisualEffectView.frame = view.bounds
+        
         let ac = UIAlertController(title: "Ooooooopppsssss",
                                    message: "It seems that something went wrong. Please reload",
                                    preferredStyle: .alert)
@@ -88,9 +93,11 @@ extension JokesViewController {
                 self.jokeAnswerLabel.text = randomJoke.delivery
                 self.activityController.stopAnimating()
                 }
-            }
+                blurVisualEffectView.removeFromSuperview()
+            } 
         }
         ac.addAction(reloadButton)
+        self.view.addSubview(blurVisualEffectView)
         self.present(ac, animated: true, completion: nil)
     }
 }
